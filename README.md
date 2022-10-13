@@ -11,6 +11,12 @@ MP: `./mp_checkpoint`
 
 MS: `./ms_checkpoint`
 
+## Dependencies
+Dependencies are defined in `as_plax.yml`, to create a conda environment:
+```
+conda env create -f echo_models.yml
+```
+
 ## Preprocessing of Echo Data
 The preprocessing includes extracting pixel files from the raw Dicom format, de-identification, removal of ECG and other meta data and resizing/sampling the frames of echo videos. Source codes are under `./utils`.
 
