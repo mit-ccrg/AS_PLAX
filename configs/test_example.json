@@ -1,0 +1,35 @@
+{
+    "basic_options": {
+        "is_train": "testing",
+        "data_dir": "/path/to/videos",
+        "label_dir": "/path/to/labels",
+        "label_file": "gradient",
+        "save_dir": "/path/to/checkpoint/save/dir",
+        "name": "test_example",
+        "verbose": 0,
+        "gpu_ids": "0"
+    },
+    "model_options": {
+        "seed": 1234,
+        "model": "pre_train_res",
+        "num_outcomes": "1",
+        "loss_function": "BCE"
+    },
+    "dataset_options": {
+        "dataset_name": "Dataset_Example",
+        "max_frame": 20,
+        "if_split": "False",
+        "input_size": "150-200",
+        "batch_size": 128,
+        "device": "cuda",
+        "num_frames": 20,
+        "transform": "True",
+        "ecg_aligned": "False",
+        "view": "plax_plax",
+        "view_model": "supervised"
+    },
+    "test_options": {
+        "test_epoch": "0",
+        "test_result_dir": "/path/to/save/test/results"
+    }
+}

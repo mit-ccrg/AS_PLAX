@@ -1,0 +1,55 @@
+{
+    "basic_options": {
+        "is_train": "training",
+        "data_dir": "/path/to/videos",
+        "label_dir": "/path/to/labels",
+        "label_file": "gradient",
+        "save_dir": "/path/to/checkpoint/save/dir",
+        "name": "train_example",
+        "verbose": 1,
+        "gpu_ids": "0",
+        "date": "2022_01_01"
+    },
+    "model_options": {
+        "seed": 1234,
+        "model": "pre_train_res",
+        "kernel_size": "2-4-4",
+        "num_outcomes": "1",
+        "loss_function": "BCE"
+    },
+    "dataset_options": {
+        "dataset_name": "Dataset_Example",
+        "max_frame": 18,
+        "if_split": "False",
+        "input_size": "150-200",
+        "batch_size": 128,
+        "device": "cuda",
+        "num_frames": 10,
+        "transform": "False",
+        "ecg_aligned": "False",
+        "view": "plax_plax",
+        "view_model": "supervised",
+        "masked": "True"
+    },
+    "train_options": {
+        "n_epochs": 10,
+        "print_freq": 1,
+        "optimizer": "adam",
+        "train_size": 0.8,
+        "pre_train": "False",
+        "momentum": 0,
+        "is_continue": "False",
+        "continue_check_point_dir": "None",
+        "continue_epoch": "0",
+        "learning_rate": {
+            "lr": 0.0001,
+            "weight_decay": 0.01,
+            "lr_strategy": "linear",
+            "lr_decay_iters": 50
+        }
+    },
+    "test_options": {
+        "test_epoch": "",
+        "test_result_dir": ""
+    }
+}
