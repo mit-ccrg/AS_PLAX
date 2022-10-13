@@ -11,13 +11,13 @@ MP: `./mp_checkpoint`
 
 MS: `./ms_checkpoint`
 
-## Preprocessing of Dicom Files
-The preprocessing include extracting pixel files from the raw Dicom files, de-identification, remove ECG and other meta data and resize the frames of the video. Source codes are under `./utils`
+## Preprocessing of Echo Data
+The preprocessing includes extracting pixel files from the raw Dicom format, de-identification, removal of ECG and other meta data and resizing/sampling the frames of echo videos. Source codes are under `./utils`.
 
-## Create a Dataset
+## Creating a Dataset
 To load a new dataset for training and inference, create a dataset file under `./datasets` like `dataset_example.py`.
 
-## Training Model
+## Training a Model
 
 To train a model, create a new config file under ./configs like `train_example.json`.
 
@@ -25,7 +25,7 @@ In this config file, define training configerations like path to data, label, hy
 
 Command to launch training: `python train.py --json_file path/to/json`
 
-## Testing Model
+## Testing a Model
 
 To test a model, create a new config file under ./configs like `test_example.json`.
 
